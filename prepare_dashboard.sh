@@ -19,7 +19,7 @@ for filename in $1/*.json; do
   jq '.id = null | del(.__requires) | del(.uid) | { dashboard: . , inputs: .__inputs, overwrite: true  }' | \
   jq '.inputs[0].value=.inputs[0].pluginId' | \
   jq 'del(.dashboard.meta) | .dashboard.dashboard.id = null' | \
-  jq '.dashboard.dashboard.annotations.list[0].hide = false | del(.inputs) | del(.overwrite) | .dashboard'| \
+  jq '.dashboard.dashboard.annotations.list[0].hide = false | del(.inputs) | del(.overwrite) | .dashboard.dashboard'| \
   tee "$DIR/$filename" 
 done
 
