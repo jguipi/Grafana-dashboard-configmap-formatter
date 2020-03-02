@@ -12,4 +12,4 @@ kubectl create configmap <your_configmap_name> --from-file=<path_to_your_file>
 
 
 ### Shout out
-original script from https://gist.github.com/aranair/bec788df5a9a292f42e088e481b856c6
+This script is inspired by:  https://gist.github.com/aranair/bec788df5a9a292f42e088e481b856c6
